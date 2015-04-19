@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<table class="table">
+  <p>
+    <strong>Date:</strong>
+    <%= @post.created_at.in_time_zone('Eastern Time (US & Canada)') %>
+  </p>
+  <p>
+    <strong>Title:</strong>
+    <%= @post.title %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= @post.body %>
+  </p>
+</table>
+<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-warning' %> 
+<%= link_to 'Back', posts_path, class: 'btn btn-primary' %>
